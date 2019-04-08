@@ -22,8 +22,6 @@ compute_user_score <- function (user_screen_name) {
     
     # fetch the data on followers chunk by chunk until there aren't any left
     while (start <= nb_followers) {
-      print(start)
-      
       # wait for the rate limit to reset before proceeding
       Sys.sleep(ceiling(as.numeric(rate_limit(query = "lookup_users")$reset) * 60))
       
