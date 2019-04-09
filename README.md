@@ -17,7 +17,8 @@ so when you try to run it.
 Then:
 ```
     > source("Twitter_score.R")
+    > compute_user_score()
 ```
 
 if all is well you should be prompted for the Twitter handle you're interested
-in.
+in. You may get a spurious prompt when you source the file, too.
