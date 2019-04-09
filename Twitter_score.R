@@ -1,4 +1,8 @@
-library(rtweet)
+# try to load rtweet and, if it hasn't been installed, install it before loading it
+if (!require("rtweet")) {
+  install.packages("rtweet")
+  library(rtweet)
+}
 
 # compute the score for the user whose screen name is provided
 compute_user_score <- function (user_screen_name) {
